@@ -10,7 +10,7 @@
     <fieldset>
       <legend style="background: lightblue;">Personal Data</legend>
       <fieldset>
-          <legend style="background: purple;">Form1</legend>
+          <legend style="background: purple;"><br>Form1 <br><br></legend>
         <table style="background: lightcyan;">
           <tr>
             <td>
@@ -82,7 +82,20 @@
             </td>
           </tr>
         </table>
-        <button type="submit">SUBMIT</button>
+
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label><br><br>
+        <input type="radio" name="gender" id="fmale" value="female">
+        <label for="fmale">Female</label><br><br><br>
+
+        <input type="checkbox" name="status" id="std" value="student">
+        <label for="std">Student</label><br><br>
+        <input type="checkbox" name="status" id="grad" value="graduate">
+        <label for="grad">Graduate</label><br><br>
+
+        <button type="submit">
+          <img src="submit.png" alt="Submit" width="100">
+        </button>
     </fieldset>
   </form>
 </body>
