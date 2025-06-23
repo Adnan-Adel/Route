@@ -21,66 +21,76 @@ submitBtn.onclick = function () {
     } else {
       updateBookmark();
     }
-    // Hide the alert if visible
     validationAlert.classList.add("hidden");
   } else {
-    // Show the custom modal
     validationAlert.classList.remove("hidden");
   }
 };
 
-
+// Validate URL
+function isValidURL(url) {
+  var pattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]{2,}(\.[a-zA-Z]{2,})+(\/[^\s]*)?$/;
+  return pattern.test(url.trim());
+}
 
 // Validate Site Name (≥ 3 chars)
 function isValidName(name) {
   return name.trim().length >= 3;
 }
 
-// Validate URL (simple regex for http(s)://... )
-function isValidURL(url) {
-  var pattern = /^(https?:\/\/)[^\s$.?#].[^\s]*$/gm;
-  return pattern.test(url.trim());
-}
-
-// Check whole form before adding
+// Whole form check
 function validateForm() {
-  var nameValid = isValidName(siteNameInput.value);
-  var urlValid = isValidURL(siteURLInput.value);
-
-  return nameValid && urlValid;
+  return isValidName(siteNameInput.value) && isValidURL(siteURLInput.value);
 }
 
-
-// Live check for Site Name
+// Live name check
 function validateSiteName() {
-  var nameValid = isValidName(siteNameInput.value);
+  var valid = isValidName(siteNameInput.value);
   siteNameInput.classList.remove("is-valid", "is-invalid");
-  siteNameInput.classList.add(nameValid ? "is-valid" : "is-invalid");
+  siteNameInput.classList.add(valid ? "is-valid" : "is-invalid");
 }
 
-// Live check for Site URL
+// Live URL check
 function validateSiteURL() {
-  var urlValid = isValidURL(siteURLInput.value);
+  var valid = isValidURL(siteURLInput.value);
   siteURLInput.classList.remove("is-valid", "is-invalid");
-  siteURLInput.classList.add(urlValid ? "is-valid" : "is-invalid");
+  siteURLInput.classList.add(valid ? "is-valid" : "is-invalid");
 }
 
-// Function to close the modal
+// Close modal
 function closeValidationAlert() {
   validationAlert.classList.add("hidden");
 }
 
-// Add new bookmark
+// Add bookmark with ensured https://
 function addBookmark() {
+  var rawURL = siteURLInput.value.trim();
+  var finalURL = rawURL.match(/^https?:\/\//) ? rawURL : 'https://' + rawURL;
+
   var bookmark = {
-    name: siteNameInput.value,
-    url: siteURLInput.value
+    name: siteNameInput.value.trim(),
+    url: finalURL
   };
 
   bookmarkList.push(bookmark);
   saveBookmarks();
   displayBookmarks();
   clearInputs();
+}
+
+// Update bookmark with ensured https://
+function updateBookmark() {
+  if (updateIndex !== null) {
+    var rawURL = siteURLInput.value.trim();
+    var finalURL = rawURL.match(/^https?:\/\//) ? rawURL : 'https://' + rawURL;
+
+    bookmarkList[updateIndex].name = siteNameInput.value.trim();
+    bookmarkList[updateIndex].url = finalURL;
+
+    saveBookmarks();
+    displayBookmarks();
+    clearInputs();
+  }
 }
 
 // Display bookmarks
@@ -122,7 +132,6 @@ function deleteBookmark(index) {
 function clearInputs() {
   siteNameInput.value = "";
   siteURLInput.value = "";
-  updateIndex = null;
   siteNameInput.classList.remove("is-valid", "is-invalid");
   siteURLInput.classList.remove("is-valid", "is-invalid");
   updateIndex = null;
