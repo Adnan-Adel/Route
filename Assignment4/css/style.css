@@ -1,0 +1,51 @@
+body {
+  background-color: #24353F;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-custom {
+  background-color: #2e3b47;
+}
+
+.form-control {
+  background-color: white;
+  color: #000;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.btn-info:hover {
+  background-color: #17A2B8;
+  border-color: #17A2B8;
+  color: white;
+}
+
+.form-control.is-valid,
+.form-control.is-valid:focus,
+.form-select.is-valid,
+.form-select.is-valid:focus {
+  box-shadow: none !important;
+  border-color: #198754 !important;
+  border-width: 2px;
+}
+
+.form-control.is-invalid,
+.form-control.is-invalid:focus,
+.form-select.is-invalid,
+.form-select.is-invalid:focus {
+  box-shadow: none !important;
+  border-color: rgb(216, 31, 31) !important;
+  border-width: 2px;
+}
+
+#homeSection {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #24353F;
+}
+
+#homeSection h1 span {
+  color: #17A2B8;
+}
