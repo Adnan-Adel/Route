@@ -1,0 +1,108 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+.title {
+  background: linear-gradient(to right, #8b4513, #a0522d);
+  /* dark brown/orange fill */
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.dotted-line {
+  border-top: 2px dotted #fff;
+}
+
+.bookmark-icons {
+  color: #198754;
+}
+
+.form-label {
+  color: #000;
+}
+
+.btn-submit {
+  background-color: #a52a2a;
+  /* dark red/dark orange */
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #8b0000;
+}
+
+.btn-visit {
+  background-color: #9eb23b;
+  color: #fff;
+}
+
+.btn-visit:hover {
+  background-color: #83942f;
+}
+
+.btn-delete {
+  background-color: #b30000;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #800000;
+}
+
+input.is-valid {
+  border: 2px solid #198754;
+  /* Bootstrap green */
+}
+
+input.is-invalid {
+  border: 2px solid #dc3545;
+  /* Bootstrap red */
+}
+
+/* Use custom class, NOT Bootstrap modal class */
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Hide by default */
+.hidden {
+  display: none;
+}
+
+.custom-modal-content {
+  background: #fff;
+  color: #000;
+  /* fallback for non-Bootstrap elements */
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-modal-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.custom-modal-content li {
+  margin-bottom: 8px;
+}
+
+.btn-close {
+  background: none;
+}

@@ -1,0 +1,99 @@
+/* CSS/media.css */
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .chefs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-column {
+        width: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100%;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-form form {
+        flex-direction: column;
+    }
+
+    .contact-form .half {
+        width: 100%;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

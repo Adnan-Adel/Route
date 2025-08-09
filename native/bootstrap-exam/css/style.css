@@ -1,0 +1,534 @@
+/* -------------------------------- Global Styles -------------------------------- */
+:root {
+  --main-color: #FFF;
+  --bg-light-dark: #1C1C1C;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.bg-light-dark {
+  background-color: var(--bg-light-dark);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main-title .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title .title h2 {
+  letter-spacing: 20px;
+  color: #cccccc81;
+}
+
+.main-title .title h3 {
+  position: absolute;
+  letter-spacing: 5px;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-bg-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+  letter-spacing: 5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* -------------------------------- Navbar Styles -------------------------------- */
+.my-nav .nav-link {
+  position: relative;
+}
+
+.my-nav .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.my-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.my-nav .nav-link.active::after {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.my-nav .nav-link.active {
+  color: var(--main-color);
+}
+
+/* -------------------------------- Home Styles -------------------------------- */
+.home {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.animated-text {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.animated-text::after {
+  content: "Freelancer";
+  display: inline-block;
+  animation: switchText 20s infinite;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes switchText {
+
+  /* Typing "Larry Daniels" */
+  0% {
+    content: "|";
+  }
+
+  2% {
+    content: "L|";
+  }
+
+  4% {
+    content: "La|";
+  }
+
+  6% {
+    content: "Lar|";
+  }
+
+  8% {
+    content: "Larr|";
+  }
+
+  10% {
+    content: "Larry|";
+  }
+
+  12% {
+    content: "Larry D|";
+  }
+
+  14% {
+    content: "Larry Da|";
+  }
+
+  16% {
+    content: "Larry Dan|";
+  }
+
+  18% {
+    content: "Larry Dani|";
+  }
+
+  20% {
+    content: "Larry Danie|";
+  }
+
+  22% {
+    content: "Larry Daniel|";
+  }
+
+  24% {
+    content: "Larry Daniels|";
+  }
+
+  /* Deleting */
+  28% {
+    content: "Larry Daniel|";
+  }
+
+  30% {
+    content: "Larry Dani|";
+  }
+
+  32% {
+    content: "Larry Dan|";
+  }
+
+  34% {
+    content: "Larry Da|";
+  }
+
+  36% {
+    content: "Larry D|";
+  }
+
+  38% {
+    content: "Larry|";
+  }
+
+  40% {
+    content: "Larr|";
+  }
+
+  42% {
+    content: "Lar|";
+  }
+
+  44% {
+    content: "La|";
+  }
+
+  46% {
+    content: "L|";
+  }
+
+  48% {
+    content: "|";
+  }
+
+  /* Typing "Developer" */
+  50% {
+    content: "D|";
+  }
+
+  52% {
+    content: "De|";
+  }
+
+  54% {
+    content: "Dev|";
+  }
+
+  56% {
+    content: "Deve|";
+  }
+
+  58% {
+    content: "Devel|";
+  }
+
+  60% {
+    content: "Develo|";
+  }
+
+  62% {
+    content: "Develop|";
+  }
+
+  64% {
+    content: "Developer|";
+  }
+
+  /* Pause */
+  68% {
+    content: "Developer|";
+  }
+
+  /* Deleting "Developer" */
+  70% {
+    content: "Develop|";
+  }
+
+  72% {
+    content: "Develo|";
+  }
+
+  74% {
+    content: "Devel|";
+  }
+
+  76% {
+    content: "Deve|";
+  }
+
+  78% {
+    content: "Dev|";
+  }
+
+  80% {
+    content: "De|";
+  }
+
+  82% {
+    content: "D|";
+  }
+
+  84% {
+    content: "|";
+  }
+
+  /* Typing "Designer" */
+  86% {
+    content: "D|";
+  }
+
+  88% {
+    content: "De|";
+  }
+
+  90% {
+    content: "Des|";
+  }
+
+  92% {
+    content: "Desi|";
+  }
+
+  94% {
+    content: "Desig|";
+  }
+
+  96% {
+    content: "Design|";
+  }
+
+  98% {
+    content: "Designe|";
+  }
+
+  100% {
+    content: "Designer|";
+  }
+}
+
+
+/* -------------------------------- About Styles -------------------------------- */
+#about .first-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  transition: all 0.3s ease;
+}
+
+#about .first-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+
+/* -------------------------------- Services Styles -------------------------------- */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon-box .icon {
+  font-size: 25px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.service-box:hover .icon-box {
+  background-color: #1C1C1C;
+}
+
+.service-box:hover .icon-box .icon {
+  color: #fff;
+}
+
+/* -------------------------------- Portfolio Styles -------------------------------- */
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .text {
+  text-align: center;
+  color: #fff;
+}
+
+.overlay .icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.overlay .icons i {
+  font-size: 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlay .icons i:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+/* -------------------------------- Testimonial Styles -------------------------------- */
+.testimonial-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(28, 28, 28, 0.3);
+  /* faded dark */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-dot:hover {
+  background-color: rgba(28, 28, 28, 0.6);
+  /* darker on hover */
+}
+
+.nav-link.active .testimonial-dot {
+  background-color: #1C1C1C;
+  /* fully dark when active */
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: lightblue;
+}
+
+.nav-link.active .dot {
+  background-color: white;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  outline: none;
+}
+
+/* -------------------------------- OurTeam Styles -------------------------------- */
+.team-card {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-circle:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* -------------------------------- Contact Styles -------------------------------- */
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #F7F7F7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#contact .custom-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  transition: all 0.3s ease;
+}
+
+#contact .custom-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}

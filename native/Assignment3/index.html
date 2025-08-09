@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="py-5">
+    <div class="container text-center">
+        <!-- Title -->
+        <h1 class="title mb-3">Bookmarker</h1>
+        <hr class="dotted-line mb-5" />
+
+        <!-- Bookmark Form -->
+        <div class="mb-4 bookmark-icons">
+            <h3>
+                <i class="fa-solid fa-bookmark pe-2"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark ps-2"></i>
+            </h3>
+        </div>
+
+        <div class="w-75 mx-auto">
+            <!-- Site Name -->
+            <div class="mb-3 text-start">
+                <label class="form-label">
+                    <i class="fa-solid fa-bookmark pe-2"></i> Site Name
+                </label>
+                <input type="text" id="siteName" class="form-control" placeholder="Bookmark Name"
+                    oninput="validateSiteName()" />
+            </div>
+
+            <!-- Site URL -->
+            <div class="mb-3 text-start">
+                <label class="form-label">
+                    <i class="fa-solid fa-link pe-2"></i> Site URL
+                </label>
+                <input type="url" id="siteURL" class="form-control" placeholder="Website URL"
+                    oninput="validateSiteURL()" />
+            </div>
+
+            <!-- Submit Button -->
+            <button id="submitBtn" class="btn btn-submit px-5">Submit</button>
+        </div>
+
+        <hr class="dotted-line my-5" />
+
+        <!-- Bookmarks Table -->
+        <div class="table-responsive">
+            <table class="table table-dark table-striped text-center align-middle">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Dynamic rows here by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Custom Validation Alert Modal -->
+    <div id="validationAlert" class="custom-modal hidden">
+        <div class="custom-modal-content text-dark position-relative">
+            <!-- Decorative Circles -->
+            <div class="d-flex gap-2 mb-3">
+                <span class="rounded-circle" style="background-color: #ff5f56; width: 12px; height: 12px;"></span>
+                <span class="rounded-circle" style="background-color: #ffbd2e; width: 12px; height: 12px;"></span>
+                <span class="rounded-circle" style="background-color: #27c93f; width: 12px; height: 12px;"></span>
+            </div>
+
+            <!-- Custom Close Icon -->
+            <button type="button" class="position-absolute top-0 end-0 m-3 border-0 bg-transparent fs-4"
+                aria-label="Close" onclick="closeValidationAlert()">✖</button>
+
+
+            <!-- Content -->
+            <div class="ps-1">
+                <h5 class="fw-bold mb-3">Site Name or URL is not valid</h5>
+                <p class="mb-3">Please follow the rules below:</p>
+                <ul class="ps-0">
+                    <li class="mb-2">🔴 Site name must contain at least 3 characters</li>
+                    <li>🔴 Site URL must be a valid one (start with http:// or https://)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

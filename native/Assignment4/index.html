@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login System</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-dark d-flex align-items-center justify-content-center vh-100">
+
+    <!-- Login Section -->
+    <section id="loginSection" class="login-form bg-custom shadow p-5 rounded-3 w-75 mx-auto text-white">
+        <h2 class="text-center text-uppercase text-info mb-4">Smart Login System</h2>
+
+        <!-- Email -->
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-0" id="userEmail" placeholder="Enter your email" />
+            <label for="userEmail">Enter your email</label>
+            <p class="fs-6 text-danger fw-medium mt-2 d-none" id="emailError">Invalid email format</p>
+        </div>
+
+        <!-- Password -->
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-0" id="userPassword" placeholder="Enter your password" />
+            <label for="userPassword">Enter your password</label>
+            <p class="fs-6 text-danger fw-medium mt-2 d-none" id="passwordError">Password must be at least 8 characters
+                and contain a number</p>
+        </div>
+
+        <!-- Login button -->
+        <button id="addBtn" class="btn btn-info text-white w-100">Login</button>
+
+        <!-- Signup prompt -->
+        <h5 class="mt-4 text-center">
+            Don’t have an account?
+            <a href="#" id="showSignup" class="text-info text-decoration-none">Sign Up</a>
+        </h5>
+    </section>
+
+
+    <!-- Sign Up Section -->
+    <section id="signupSection" class="login-form bg-custom shadow p-5 rounded-3 w-75 mx-auto text-white d-none">
+        <h2 class="text-center text-uppercase text-info mb-4">Sign Up</h2>
+
+        <!-- Name -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-0" id="signupName" placeholder="Enter your name" />
+            <label for="signupName">Enter your name</label>
+            <p class="fs-6 text-danger fw-medium mt-2 d-none" id="signupNameError">Name must be at least 3 characters
+            </p>
+        </div>
+
+        <!-- Sign Up Email -->
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-0" id="signupEmail" placeholder="Enter your email" />
+            <label for="signupEmail">Enter your email</label>
+            <p id="signupEmailError" class="fs-6 text-danger fw-medium mt-2 d-none">Invalid or already registered email
+            </p>
+        </div>
+
+
+        <!-- Password -->
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-0" id="signupPassword"
+                placeholder="Enter your password" />
+            <label for="signupPassword">Enter your password</label>
+            <p class="fs-6 text-danger fw-medium mt-2 d-none" id="signupPasswordError">Password must be at least 8
+                characters and contain a number</p>
+        </div>
+
+        <button id="signupBtn" class="btn btn-info text-white w-100">Sign Up</button>
+
+        <h5 class="mt-4 text-center">
+            You have an account?
+            <a href="index.html" id="showLogin" class="text-info text-decoration-none">Sign In</a>
+        </h5>
+    </section>
+
+    <!-- HOME Section -->
+    <section id="homeSection" class="d-none text-white">
+        <!-- Header bar -->
+        <header class="d-flex justify-content-between align-items-center px-5 py-3 shadow"
+            style="background-color: #2e3b47;">
+            <h2 class="m-0 text-info">Smart Login System</h2>
+            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+        </header>
+
+        <!-- Centered welcome box -->
+        <div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 80px);">
+            <div class="p-5 bg-custom text-center rounded-4 shadow-lg w-50">
+                <h1 class="display-5 fw-bold mb-3">Welcome <span id="usernameDisplay"></span> 👋</h1>
+                <p class="fs-4 text-secondary">Glad to see you here!</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <a href="#">Mealify<span>.</span></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="theme-toggle">
+                <input type="checkbox" id="mode-toggle" />
+                <label for="mode-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Enjoy Your Healthy <br> Delicious Food</h1>
+                <p>
+                    Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.
+                    Eum quas beatae cumque eum quaerat.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Book a Table</a>
+                    <a href="#" class="video-btn">
+                        <div class="icon">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <span>Watch a Video</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-img.png" alt="Delicious food" />
+            </div>
+        </div>
+    </section>
+
+    <section class="chefs-section" id="chefs">
+        <div class="chefs-title">
+            <span>CHEFS</span>
+            <h2>Our <span class="highlight">Professional</span> Chefs</h2>
+        </div>
+
+        <div class="chefs-container">
+            <div class="chef-card">
+                <img src="images/chefs-1.jpg" alt="Walter White">
+                <div class="chef-info">
+                    <h3>Walter White</h3>
+                    <p class="role">Master Chef</p>
+                    <p class="desc">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
+                        Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="chef-card">
+                <img src="images/chefs-2.jpg" alt="Sarah Jhonson">
+                <div class="chef-info">
+                    <h3>Sarah Jhonson</h3>
+                    <p class="role">Patissier</p>
+                    <p class="desc">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima
+                        suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="chef-card">
+                <img src="images/chefs-3.jpg" alt="William Anderson">
+                <div class="chef-info">
+                    <h3>William Anderson</h3>
+                    <p class="role">Cook</p>
+                    <p class="desc">Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.
+                        Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-section" id="gallery">
+        <div class="section-title">
+            <h5>Gallery</h5>
+            <h2>Check <span>Our Gallery</span></h2>
+        </div>
+        <section class="gallery">
+            <div class="gallery-column">
+                <div class="gallery-item">
+                    <img src="images/meal-1.jpg" alt="Pizza" />
+                    <div class="overlay">
+                        <h3>Pizza</h3>
+                        <p>Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/meal-4.jpg" alt="Levitation pizza" />
+                    <div class="overlay">
+                        <h3>Levitation pizza</h3>
+                        <p>Levitation pizza on black background.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <div class="gallery-item">
+                    <img src="images/meal-2.jpg" alt="Beef steaks" />
+                    <div class="overlay">
+                        <h3>Beef steaks</h3>
+                        <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/meal-3.jpg" alt="Burger" />
+                    <div class="overlay">
+                        <h3>Burger</h3>
+                        <p>Grass fed bison hamburger with chips & beer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <div class="gallery-item">
+                    <img src="images/meal-5.jpg" alt="Crispy Fried Chicken" />
+                    <div class="overlay">
+                        <h3>Crispy Fried Chicken</h3>
+                        <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/meal-6.jpg" alt="Lyulya kebab" />
+                    <div class="overlay">
+                        <h3>Lyulya kebab</h3>
+                        <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and herbs</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/meal-7.jpg" alt="Frittata" />
+                    <div class="overlay">
+                        <h3>Frittata</h3>
+                        <p>Frittata or potato pie in a ceramic plate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h5>Contact</h5>
+                <h2>Need Help? <span>Contact Us</span></h2>
+            </div>
+
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.946639017715!2d31.180199476383603!3d30.465949474714044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7df576<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M349.9 300.3L283.8 300.3L283.8 240.9L349.9 240.9L349.9 300.3zM349.9 96L283.8 96L283.8 156.7L349.9 156.7L349.9 96zM428.1 240.8L362 240.8L362 300.2L428.1 300.2L428.1 240.8zM271.8 168.7L205.7 168.7L205.7 228.8L271.8 228.8L271.8 168.7zM349.9 168.7L283.8 168.7L283.8 228.8L349.9 228.8L349.9 168.7zM626.7 268.7C612.3 259 579.1 255.5 553.6 260.3C550.3 236.3 536.9 215.4 512.5 196.6L498.5 187.3L489.2 201.3C470.8 229.1 465.8 274.9 485.5 305.1C476.8 309.8 459.7 316.2 437.1 315.8L2.4 315.8C-6.3 366.6 8.2 432.6 46.4 477.9C83.5 521.8 139.1 544.1 211.8 544.1C369.2 544.1 485.7 471.6 540.2 339.9C561.6 340.3 607.8 340 631.5 294.7C633 292.2 638.1 281.5 640 277.6L626.7 268.7zM115.6 240.8L49.6 240.8L49.6 300.2L115.7 300.2L115.7 240.8L115.6 240.8zM193.7 240.8L127.6 240.8L127.6 300.2L193.7 300.2L193.7 240.8zM271.8 240.8L205.7 240.8L205.7 300.2L271.8 300.2L271.8 240.8zM193.7 168.7L127.6 168.7L127.6 228.8L193.7 228.8L193.7 168.7z"/></svg>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+            schemaJson = (0, file_system_utility_1.readJsonFile)(schema);
+        }
+        // The schematic path is used to resolve URLs.
+        // We should be able to just do `dirname(resolvedRef.path)` but for compatibility with
+        // Bazel under Windows this directory needs to be resolved from the collection instead.
+        // This is needed because on Bazel under Windows the data files (such as the collection or
+        // url files) are not in the same place as the compiled JS.
+        const maybePath = (0, node_path_1.join)(collectionPath, partialDesc.factory)

@@ -1,0 +1,165 @@
+/* ===== Default styles: Desktop First ===== */
+
+/* Already declared styles will apply here by default */
+
+
+/* ===== Medium Devices: Tablets & Small Laptops ===== */
+@media (max-width: 968px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card {
+        justify-content: center;
+    }
+
+    .card:first-child {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card .card-text {
+        margin-bottom: 20px;
+    }
+
+    .card-image img {
+        max-height: 220px;
+    }
+
+    .container .main-section .top-main {
+        flex-direction: column;
+    }
+
+    .container .main-section .bottom-main {
+        grid-template-columns: 1fr;
+    }
+
+    .container .sidebar-section {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .container .footer-section .cards-container {
+        flex-direction: column;
+    }
+
+    .container .footer-section .cards-container .card {
+        padding: 30px 20px;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(3) {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(3) div {
+        width: 100%;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(3) .card-text {
+        text-align: center;
+    }
+}
+
+/* ===== Small Devices: Mobile Landscape / Small Tablets ===== */
+@media (max-width: 768px) {
+    .card-image img {
+        max-height: 200px;
+    }
+
+    .container .main-section .top-main .card,
+    .container .main-section .bottom-main .card {
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container .main-section .bottom-main .card:nth-child(2)::before {
+        top: 10px;
+        left: 10px;
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+
+    .container .sidebar-section {
+        padding: 25px 15px;
+    }
+
+    .sidebar-section .image-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .sidebar-section img {
+        width: 80px;
+    }
+
+    .sidebar-section h3 {
+        font-size: 20px;
+    }
+
+    .sidebar-section p {
+        font-size: 13px;
+    }
+
+    .container .footer-section .cards-container .card {
+        font-size: 14px;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(2) {
+        font-size: 18px;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(3) .card-text {
+        font-size: 18px;
+    }
+}
+
+/* ===== Extra Small Devices: Phones Portrait ===== */
+@media (max-width: 480px) {
+
+    .container .main-section .top-main .card,
+    .container .main-section .bottom-main .card {
+        padding: 15px;
+    }
+
+    .container .main-section .bottom-main .card:nth-child(2) p {
+        font-size: 20px;
+    }
+
+    .container .main-section .top-main .card:nth-child(1) p {
+        font-size: 18px;
+    }
+
+    .container .main-section .top-main .card:nth-child(2) p {
+        font-size: 18px;
+    }
+
+    .container .sidebar-section {
+        padding: 20px 10px;
+    }
+
+    .sidebar-section h3 {
+        font-size: 18px;
+    }
+
+    .sidebar-section p {
+        font-size: 12px;
+    }
+
+    .sidebar-section .learn-more-btn {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .container .footer-section .cards-container .card {
+        padding: 20px 15px;
+    }
+
+    .container .footer-section .cards-container .card:nth-child(3) .card-text {
+        font-size: 16px;
+    }
+}
