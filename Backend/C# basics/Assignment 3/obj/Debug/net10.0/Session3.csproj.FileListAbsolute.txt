@@ -1,0 +1,14 @@
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/bin/Debug/net10.0/Session3
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/bin/Debug/net10.0/Session3.deps.json
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/bin/Debug/net10.0/Session3.runtimeconfig.json
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/bin/Debug/net10.0/Session3.dll
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/bin/Debug/net10.0/Session3.pdb
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.GeneratedMSBuildEditorConfig.editorconfig
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.AssemblyInfoInputs.cache
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.AssemblyInfo.cs
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.csproj.CoreCompileInputs.cache
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.dll
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/refint/Session3.dll
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.pdb
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/Session3.genruntimeconfig.cache
+/home/adnan/AdnanStuff/learning/route-dotnet/Session3/obj/Debug/net10.0/ref/Session3.dll
