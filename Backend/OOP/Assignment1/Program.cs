@@ -150,7 +150,7 @@
             };
 
             Console.Write("Enter Seat Row (A, B, C...): ");
-            char row = char.ToUpper(Console.ReadLine()[0]);
+            char row = char.ToUpper(Console.ReadLine()![0]);
 
             Console.Write("Enter Seat Number: ");
             isParsed = int.TryParse(Console.ReadLine(), out int seatNumber);
@@ -160,7 +160,7 @@
             Console.Write("Enter Price: ");
             isParsed = double.TryParse(Console.ReadLine(), out double price);
 
-            Ticket ticket = new Ticket(MovieName, Type, seat, price);
+            Ticket ticket = new Ticket(MovieName!, Type, seat, price);
 
             Console.Write("Enter Discount Amount: ");
             isParsed = double.TryParse(Console.ReadLine(), out double discount);
