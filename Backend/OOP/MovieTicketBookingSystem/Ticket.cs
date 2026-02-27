@@ -2,26 +2,56 @@
 
 public class Ticket
 {
-    public string? MovieName;
-    public TicketType Type;
-    public SeatLocation Seat;
-    private double Price;
+    private string? movieName;
+    private double price;
 
-    public Ticket(string moviename, TicketType type, SeatLocation seat, double price)
+    private static int ticketCounter = 0;
+
+    public string? MovieName
     {
-        MovieName = moviename;
-        Type = type;
-        Seat = seat;
-        Price = price;
+        get { return movieName; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+                movieName = value;
+        }
+    }
+
+    public TicketType Type { get; set; }
+
+    public SeatLocation Seat { get; set; }
+
+    public double Price
+    {
+        get { return price; }
+        set
+        {
+            if (value > 0)
+                price = value;
+        }
+    }
+
+    public double PriceAfterTax => Price + (Price * 0.14);
+
+    public int TicketId { get; private set; }
+
+    public Ticket(string moviename, TicketType ticketType, SeatLocation seatLocation, double ticketPrice)
+    {
+        ticketCounter++;
+        TicketId = ticketCounter;
+
+        movieName = moviename;
+        Price = ticketPrice > 0 ? ticketPrice : 50;
+        Type = ticketType;
+        Seat = seatLocation;
     }
 
     public Ticket(string moviename) : this(moviename, TicketType.Standard, new SeatLocation { Row = 'A', Number = 1 }, 50)
     { }
 
-    public double CalcTotal(double taxPercent)
+    public static int GetTotalTicketsSold()
     {
-        double total = Price + (Price * (taxPercent / 100));
-        return total;
+        return ticketCounter;
     }
 
     public void ApplyDiscount(ref double discountAmount)
@@ -35,11 +65,7 @@ public class Ticket
 
     public void PrintTicket()
     {
-        Console.WriteLine($"Movie   : {MovieName}");
-        Console.WriteLine($"Type    : {Type}");
-        Console.WriteLine($"Seat    : {Seat.Row}{Seat.Number}");
-        Console.WriteLine($"Price   : ${Price}");
-        Console.WriteLine($"Total (14% tax) : {CalcTotal(14)}");
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | {Type} | Seat: {Seat.Row}-{Seat.Number} | Price: {Price:F0} EGP | After Tax: {PriceAfterTax:F1} EGP");
     }
 }
 
