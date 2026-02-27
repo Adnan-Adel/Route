@@ -1,0 +1,14 @@
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/bin/Debug/net10.0/Assignment2
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/bin/Debug/net10.0/Assignment2.deps.json
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/bin/Debug/net10.0/Assignment2.runtimeconfig.json
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/bin/Debug/net10.0/Assignment2.dll
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/bin/Debug/net10.0/Assignment2.pdb
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.GeneratedMSBuildEditorConfig.editorconfig
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.AssemblyInfoInputs.cache
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.AssemblyInfo.cs
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.csproj.CoreCompileInputs.cache
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.dll
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/refint/Assignment2.dll
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.pdb
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/Assignment2.genruntimeconfig.cache
+/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/03 OOP/Session 02/Assignment/Assignment2/obj/Debug/net10.0/ref/Assignment2.dll

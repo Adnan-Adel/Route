@@ -1,0 +1,15 @@
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/bin/Debug/net10.0/MovieTicketBookingSystem
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/bin/Debug/net10.0/MovieTicketBookingSystem.deps.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/bin/Debug/net10.0/MovieTicketBookingSystem.runtimeconfig.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/bin/Debug/net10.0/MovieTicketBookingSystem.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/bin/Debug/net10.0/MovieTicketBookingSystem.pdb
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.GeneratedMSBuildEditorConfig.editorconfig
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.AssemblyInfoInputs.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.AssemblyInfo.cs
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.csproj.CoreCompileInputs.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.sourcelink.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/refint/MovieTicketBookingSystem.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.pdb
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/MovieTicketBookingSystem.genruntimeconfig.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/MovieTicketBookingSystem/obj/Debug/net10.0/ref/MovieTicketBookingSystem.dll
