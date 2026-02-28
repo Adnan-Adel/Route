@@ -8,7 +8,7 @@ class Program
 
         Console.WriteLine("========== Ticket Booking ==========");
 
-        Ticket[] tickets = new Ticket[3];
+        Cinema cinema = new Cinema();
 
         for (int i = 1; i < 4; i++)
         {
@@ -38,35 +38,50 @@ class Program
             Console.Write("Price: ");
             isParsed = double.TryParse(Console.ReadLine(), out double price);
 
-            tickets[i - 1] = new Ticket(MovieName!, Type, seat, price);
+            Ticket ticket = new Ticket(MovieName!, Type, seat, price);
+            cinema.AddTicket(ticket);
+            Console.WriteLine();
         }
 
         Console.WriteLine("========== All Tickets ==========\n");
-        foreach (Ticket ticket in tickets)
+        for (int i = 0; i < 3; i++)
         {
-            ticket.PrintTicket();
+            Ticket? ticket = cinema[i];
+            if (ticket != null)
+            {
+                ticket.PrintTicket();
+            }
         }
 
         Console.WriteLine("\n========== Search by Movie ==========\n");
         Console.WriteLine("Enter movie name to search: ");
-        string? movieName = Console.ReadLine();
-        bool found = false;
-        foreach (Ticket ticket in tickets)
+        string? searchName = Console.ReadLine();
+        Ticket? foundTicket = cinema[searchName!];
+        if (foundTicket != null)
         {
-            if (ticket.MovieName == movieName)
-            {
-                found = true;
-                Console.Write("Found: ");
-                ticket.PrintTicket();
-                break;
-            }
+            Console.Write("Found: ");
+            foundTicket.PrintTicket();
         }
-        if (!found)
+        else
         {
-            Console.WriteLine("Not Found.");
+            Console.WriteLine("Not found.");
         }
 
         Console.WriteLine("\n========== Statistics ==========\n");
-        Console.WriteLine($"Total Tickets Sold: ");
+        Console.WriteLine($"Total Tickets Sold: {Ticket.GetTotalTicketsSold()}");
+
+        string ref1 = BookingHelper.GenerateBookingReference();
+        string ref2 = BookingHelper.GenerateBookingReference();
+        Console.WriteLine($"\nBooking Reference 1: {ref1}");
+        Console.WriteLine($"\nBooking Reference 2: {ref2}");
+
+
+        double groupPrice = BookingHelper.CalcGroupDiscount(5, 80);
+        double originalPrice = 5 * 80;
+        double discount = originalPrice - groupPrice;
+        Console.WriteLine($"\nGroup Discount (5 tickets x 80 EGP): {groupPrice} EGP (10% off applied)");
+        Console.WriteLine($"You saved: {discount} EGP");
+
+        Console.WriteLine("\n==================================================");
     }
 }
