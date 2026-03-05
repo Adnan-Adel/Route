@@ -4,69 +4,34 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("\n========== Movie Ticket Booking System ==========\n");
+        Console.WriteLine("========== Cinema Opened ==========\n");
 
-        Console.WriteLine("========== Ticket Booking ==========");
+        // a) Create a Cinema and open it
+        Cinema cinema = new Cinema("VOX Cinema");
+        cinema.OpenCinema();
 
-        Cinema cinema = new Cinema();
+        // b) Create one of each ticket type (hardcoded data) and add to Cinema
 
-        for (int i = 1; i < 4; i++)
-        {
-            Console.WriteLine($"\nEnter data for Ticket {i}:");
+        // Standard Ticket
+        StandardTicket standardTicket = new StandardTicket("Inception", 120, "A-5");
+        cinema.AddTicket(standardTicket);
 
-            Console.Write("Moive Name: ");
-            string? MovieName = Console.ReadLine();
+        // VIP Ticket
+        VIPTicket vipTicket = new VIPTicket("Avengers", 200, true);
+        cinema.AddTicket(vipTicket);
 
-            Console.Write("Ticket Type (0 = Standard , 1 = VIP , 2 = IMAX ): ");
-            bool isParsed = int.TryParse(Console.ReadLine(), out int typeChoice);
-            TicketType Type = typeChoice switch
-            {
-                0 => TicketType.Standard,
-                1 => TicketType.VIP,
-                2 => TicketType.IMAX,
-                _ => TicketType.Standard
-            };
+        // IMAX Ticket (2D)
+        IMAXTicket imaxTicket2D = new IMAXTicket("Dune", 180, false);
+        cinema.AddTicket(imaxTicket2D);
 
-            Console.Write("Seat Row (A-Z): ");
-            char row = char.ToUpper(Console.ReadLine()![0]);
+        // IMAX Ticket (3D) - price will increase by 30 automatically
+        IMAXTicket imaxTicket3D = new IMAXTicket("Midnight in paris", 120, true);
+        cinema.AddTicket(imaxTicket3D);
 
-            Console.Write("Seat Number: ");
-            isParsed = int.TryParse(Console.ReadLine(), out int seatNumber);
+        // c) Print all tickets
+        cinema.PrintAllTickets();
 
-            SeatLocation seat = new SeatLocation { Row = row, Number = seatNumber };
-
-            Console.Write("Price: ");
-            isParsed = double.TryParse(Console.ReadLine(), out double price);
-
-            Ticket ticket = new Ticket(MovieName!, Type, seat, price);
-            cinema.AddTicket(ticket);
-            Console.WriteLine();
-        }
-
-        Console.WriteLine("========== All Tickets ==========\n");
-        for (int i = 0; i < 3; i++)
-        {
-            Ticket? ticket = cinema[i];
-            if (ticket != null)
-            {
-                ticket.PrintTicket();
-            }
-        }
-
-        Console.WriteLine("\n========== Search by Movie ==========\n");
-        Console.WriteLine("Enter movie name to search: ");
-        string? searchName = Console.ReadLine();
-        Ticket? foundTicket = cinema[searchName!];
-        if (foundTicket != null)
-        {
-            Console.Write("Found: ");
-            foundTicket.PrintTicket();
-        }
-        else
-        {
-            Console.WriteLine("Not found.");
-        }
-
+        // Display total tickets sold
         Console.WriteLine("\n========== Statistics ==========\n");
         Console.WriteLine($"Total Tickets Sold: {Ticket.GetTotalTicketsSold()}");
 
@@ -75,12 +40,14 @@ class Program
         Console.WriteLine($"\nBooking Reference 1: {ref1}");
         Console.WriteLine($"\nBooking Reference 2: {ref2}");
 
-
-        double groupPrice = BookingHelper.CalcGroupDiscount(5, 80);
-        double originalPrice = 5 * 80;
+        double groupPrice = BookingHelper.CalcGroupDiscount(5, 100);
+        double originalPrice = 5 * 100;
         double discount = originalPrice - groupPrice;
-        Console.WriteLine($"\nGroup Discount (5 tickets x 80 EGP): {groupPrice} EGP (10% off applied)");
+        Console.WriteLine($"\nGroup Discount (5 tickets x 100 EGP): {groupPrice} EGP (10% off applied)");
         Console.WriteLine($"You saved: {discount} EGP");
+
+        // d) Close the Cinema
+        cinema.CloseCinema();
 
         Console.WriteLine("\n==================================================");
     }

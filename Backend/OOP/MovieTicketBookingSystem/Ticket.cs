@@ -2,10 +2,15 @@
 
 public class Ticket
 {
+    // ---------- Private Fields ----------
     private string? movieName;
-    private double price;
-
+    private decimal price;
     private static int ticketCounter = 0;
+
+
+
+    // ---------- Properities ----------
+    public int TicketId { get; private set; }
 
     public string? MovieName
     {
@@ -17,11 +22,7 @@ public class Ticket
         }
     }
 
-    public TicketType Type { get; set; }
-
-    public SeatLocation Seat { get; set; }
-
-    public double Price
+    public decimal Price
     {
         get { return price; }
         set
@@ -31,54 +32,29 @@ public class Ticket
         }
     }
 
-    public double PriceAfterTax => Price + (Price * 0.14);
+    // computed property
+    public decimal PriceAfterTax => Price + (Price * 0.14m);
 
-    public int TicketId { get; private set; }
-
-    public Ticket(string moviename, TicketType ticketType, SeatLocation seatLocation, double ticketPrice)
+    // ---------- Constructor ----------
+    public Ticket(string moviename, decimal ticketPrice)
     {
         ticketCounter++;
         TicketId = ticketCounter;
 
         movieName = moviename;
-        Price = ticketPrice > 0 ? ticketPrice : 50;
-        Type = ticketType;
-        Seat = seatLocation;
+        Price = ticketPrice > 0 ? ticketPrice : 50m;
     }
 
-    public Ticket(string moviename) : this(moviename, TicketType.Standard, new SeatLocation { Row = 'A', Number = 1 }, 50)
-    { }
-
+    // ---------- Static Methods ----------
     public static int GetTotalTicketsSold()
     {
         return ticketCounter;
     }
 
-    public void ApplyDiscount(ref double discountAmount)
+
+    // ---------- Override ToString ----------
+    public override string ToString()
     {
-        if (discountAmount > 0 && discountAmount <= Price)
-        {
-            Price = Price - discountAmount;
-            discountAmount = 0;
-        }
+        return $"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP";
     }
-
-    public void PrintTicket()
-    {
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | {Type} | Seat: {Seat.Row}-{Seat.Number} | Price: {Price:F0} EGP | After Tax: {PriceAfterTax:F1} EGP");
-    }
-}
-
-
-public enum TicketType
-{
-    Standard,
-    VIP,
-    IMAX
-}
-
-public struct SeatLocation
-{
-    public char Row;
-    public int Number;
 }

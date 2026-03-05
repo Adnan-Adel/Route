@@ -2,37 +2,21 @@
 
 public class Cinema
 {
-    private Ticket?[] tickets = new Ticket?[20];
+    // ---------- Private Fields ----------
+    private Ticket?[] tickets = new Ticket[20];
+    private Projector projector;
 
-    public Ticket? this[int index]
-    {
-        get
-        {
-            if (index >= 0 && index < tickets.Length)
-                return tickets[index];
-            return null;
-        }
-        set
-        {
-            if (index >= 0 && index < tickets.Length)
-                tickets[index] = value;
-        }
-    }
-    public Ticket? this[string movieName]
-    {
-        get
-        {
-            if (string.IsNullOrEmpty(movieName))
-                return null;
+    // ---------- Properties ----------
+    public string CinemaName { get; set; }
 
-            foreach (var ticket in tickets)
-            {
-                if (ticket != null && ticket.MovieName == movieName)
-                    return ticket;
-            }
-            return null;
-        }
+    // ---------- Constructor ----------
+    public Cinema(string cinemaName)
+    {
+        CinemaName = cinemaName;
+        projector = new Projector();
     }
+
+    // ---------- Methods ----------
     public bool AddTicket(Ticket t)
     {
         if (t == null)
@@ -46,5 +30,40 @@ public class Cinema
             }
         }
         return false;
+    }
+
+    public void PrintAllTickets()
+    {
+        Console.WriteLine($"\n========== {CinemaName} - All Tickets ==========");
+        bool hasTickets = false;
+
+        for (int i = 0; i < tickets.Length; i++)
+        {
+            if (tickets[i] != null)
+            {
+                Console.WriteLine(tickets[i]!.ToString());
+                hasTickets = true;
+            }
+        }
+
+        if (!hasTickets)
+        {
+            Console.WriteLine("No tickets sold yet.");
+        }
+        Console.WriteLine("=====================================================\n");
+    }
+
+    public void OpenCinema()
+    {
+        Console.WriteLine($"\nOpening {CinemaName}...");
+        projector.TurnOn();
+        Console.WriteLine($"{CinemaName} is now OPEN\n");
+    }
+
+    public void CloseCinema()
+    {
+        Console.WriteLine($"\nClosing {CinemaName}...");
+        projector.TurnOff();
+        Console.WriteLine($"{CinemaName} is now CLOSED\n");
     }
 }
