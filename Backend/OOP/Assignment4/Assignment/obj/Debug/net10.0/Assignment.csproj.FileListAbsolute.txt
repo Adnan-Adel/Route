@@ -1,0 +1,15 @@
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/bin/Debug/net10.0/Assignment
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/bin/Debug/net10.0/Assignment.deps.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/bin/Debug/net10.0/Assignment.runtimeconfig.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/bin/Debug/net10.0/Assignment.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/bin/Debug/net10.0/Assignment.pdb
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.GeneratedMSBuildEditorConfig.editorconfig
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.AssemblyInfoInputs.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.AssemblyInfo.cs
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.csproj.CoreCompileInputs.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.sourcelink.json
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/refint/Assignment.dll
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.pdb
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/Assignment.genruntimeconfig.cache
+/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/Assignment4/Assignment/obj/Debug/net10.0/ref/Assignment.dll
