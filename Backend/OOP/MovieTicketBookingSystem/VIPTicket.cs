@@ -14,11 +14,12 @@ public class VIPTicket : Ticket
         LoungeAccess = loungeAccess;
     }
 
-    // ---------- Override ToString ----------
-    public override string ToString()
+
+    // ---------- Override Method ----------
+    public override void PrintTicket()
     {
         string lounge = LoungeAccess ? "Yes" : "No";
         decimal total = PriceAfterTax + ServiceFee;
-        return base.ToString() + $" | Type: VIP | Lounge: {lounge} | Service Fee: {ServiceFee:F2} EGP | Total: {total:F2} EGP";
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: VIP | Lounge: {lounge} | Service Fee: {ServiceFee:F2} EGP | Total: {total:F2} EGP");
     }
 }

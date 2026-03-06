@@ -9,12 +9,12 @@ public class Projector
     public void TurnOn()
     {
         IsOn = true;
-        Console.WriteLine("Projector is now ON");
+        Console.WriteLine("Projector Started");
     }
 
     public void TurnOff()
     {
         IsOn = false;
-        Console.WriteLine("Projector is now OFF");
+        Console.WriteLine("Projector Stopped");
     }
 }

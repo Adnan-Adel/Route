@@ -45,16 +45,28 @@ public class Ticket
         Price = ticketPrice > 0 ? ticketPrice : 50m;
     }
 
+    // ---------- Methods ----------
+    public void SetPrice(decimal price)
+    {
+        Price = price;
+    }
+
+    public void SetPrice(decimal basePrice, decimal multiplier)
+    {
+        Price = basePrice * multiplier;
+    }
+
+
+    // ---------- Virtual Methods ----------
+    public virtual void PrintTicket()
+    {
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP");
+    }
+
+
     // ---------- Static Methods ----------
     public static int GetTotalTicketsSold()
     {
         return ticketCounter;
-    }
-
-
-    // ---------- Override ToString ----------
-    public override string ToString()
-    {
-        return $"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP";
     }
 }

@@ -24,10 +24,10 @@ public class IMAXTicket : Ticket
         Is3D = is3D;
     }
 
-    // ---------- Override ToString ----------
-    public override string ToString()
+    // ---------- Override Method ----------
+    public override void PrintTicket()
     {
         string format = Is3D ? "3D" : "2D";
-        return base.ToString() + $" | Type: IMAX | Format: {format}";
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: IMAX | Format: {format}");
     }
 }

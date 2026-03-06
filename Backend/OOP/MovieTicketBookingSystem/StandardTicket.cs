@@ -12,9 +12,10 @@ public class StandardTicket : Ticket
         SeatNumber = seatNumber;
     }
 
-    // ---------- Override ToString ----------
-    public override string ToString()
+    // ---------- Override Method ----------
+    public override void PrintTicket()
     {
-        return base.ToString() + $" | Type: Standard | Seat: {SeatNumber}";
+
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: Standard | Seat: {SeatNumber}");
     }
 }

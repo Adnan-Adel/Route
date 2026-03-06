@@ -41,7 +41,7 @@ public class Cinema
         {
             if (tickets[i] != null)
             {
-                Console.WriteLine(tickets[i]!.ToString());
+                ProcessTicket(tickets[i]!);
                 hasTickets = true;
             }
         }
@@ -65,5 +65,14 @@ public class Cinema
         Console.WriteLine($"\nClosing {CinemaName}...");
         projector.TurnOff();
         Console.WriteLine($"{CinemaName} is now CLOSED\n");
+    }
+
+    // ---------- Static Methods ----------
+    public static void ProcessTicket(Ticket t)
+    {
+        if (t != null)
+        {
+            t.PrintTicket();
+        }
     }
 }
