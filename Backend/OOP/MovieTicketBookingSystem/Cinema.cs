@@ -72,7 +72,7 @@ public class Cinema
     {
         if (t != null)
         {
-            t.PrintTicket();
+            t.Print();
         }
     }
 }

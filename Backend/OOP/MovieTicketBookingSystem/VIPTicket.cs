@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class VIPTicket : Ticket
+public class VIPTicket : Ticket, ICloneable
 {
 
     // ---------- Additional Properities ----------
@@ -16,10 +16,17 @@ public class VIPTicket : Ticket
 
 
     // ---------- Override Method ----------
-    public override void PrintTicket()
+    public override void Print()
     {
+        string status = IsBooked ? "Booked" : "Available";
+
         string lounge = LoungeAccess ? "Yes" : "No";
         decimal total = PriceAfterTax + ServiceFee;
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: VIP | Lounge: {lounge} | Service Fee: {ServiceFee:F2} EGP | Total: {total:F2} EGP");
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: VIP | Lounge: {lounge} | Service Fee: {ServiceFee:F2} EGP | Total: {total:F2} EGP | Status: {status}");
+    }
+
+    public Object Clone()
+    {
+        return new VIPTicket(this.MovieName!, this.Price, this.LoungeAccess);
     }
 }

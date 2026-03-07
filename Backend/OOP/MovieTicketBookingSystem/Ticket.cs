@@ -1,11 +1,12 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class Ticket
+public class Ticket : IPrintable
 {
     // ---------- Private Fields ----------
     private string? movieName;
     private decimal price;
     private static int ticketCounter = 0;
+    private bool isBooked;
 
 
 
@@ -32,6 +33,11 @@ public class Ticket
         }
     }
 
+    public bool IsBooked
+    {
+        get { return isBooked; }
+    }
+
     // computed property
     public decimal PriceAfterTax => Price + (Price * 0.14m);
 
@@ -56,11 +62,35 @@ public class Ticket
         Price = basePrice * multiplier;
     }
 
+    public bool Book()
+    {
+        if (isBooked)
+        {
+            Console.WriteLine($"Ticket #{TicketId} is already booked.");
+            return false;
+        }
+
+        isBooked = true;
+        return true;
+    }
+
+    public bool Cancel()
+    {
+        if (!isBooked)
+        {
+            Console.WriteLine($"Ticket #{TicketId} is not booked.");
+            return false;
+        }
+
+        isBooked = false;
+        return true;
+    }
 
     // ---------- Virtual Methods ----------
-    public virtual void PrintTicket()
+    public virtual void Print()
     {
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP");
+        string status = IsBooked ? "Booked" : "Available";
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Status: {status}");
     }
 
 

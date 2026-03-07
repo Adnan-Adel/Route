@@ -17,4 +17,15 @@ public static class BookingHelper
         bookingCounter++;
         return $"BK-{bookingCounter}";
     }
+
+    public static void PrintBookings(IPrintable[] printables)
+    {
+        foreach (var printable in printables)
+        {
+            if (printable != null)
+            {
+                printable.Print();
+            }
+        }
+    }
 }

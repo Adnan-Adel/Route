@@ -13,28 +13,49 @@
             VIPTicket vipTicket = new VIPTicket("Avengers", 200, true);
             IMAXTicket imaxTicket = new IMAXTicket("Dune", 180, false);
 
-            // c) Test both versions of SetPrice on one ticket
-            Console.WriteLine("========== SetPrice Test ==========");
-            Console.WriteLine($"Setting price directly: 150");
-            standardTicket.SetPrice(150);
-            Console.WriteLine($"Setting price with multiplier: 100 x 1.5 = 150");
-            standardTicket.SetPrice(100, 1.5m);
-            Console.WriteLine();
+            // Book all tickets
+            standardTicket.Book();
+            vipTicket.Book();
+            imaxTicket.Book();
 
-            // Add all tickets to cinema
+            // Add tickets to cinema
             cinema.AddTicket(standardTicket);
             cinema.AddTicket(vipTicket);
             cinema.AddTicket(imaxTicket);
 
-            // d) Print all tickets (uses polymorphism)
+            // c) Print all tickets (uses polymorphism)
             cinema.PrintAllTickets();
 
-            // e) Call ProcessTicket() with one of the tickets
-            Console.WriteLine("========== Process Single Ticket ==========");
-            Cinema.ProcessTicket(vipTicket);
+            // d) Clone a VIP ticket and prove independence
+            Console.WriteLine("========== CLONING TEST ==========");
+            VIPTicket clonedVip = (VIPTicket)vipTicket.Clone();
+            clonedVip.MovieName = "Avatar";
+            Console.WriteLine("Original VIP Ticket:");
+            vipTicket.Print();
+            Console.WriteLine("Cloned VIP Ticket (Modified Movie):");
+            clonedVip.Print();
             Console.WriteLine();
 
-            // f) Close the Cinema
+            // e) Cancel one ticket and reprint it
+            Console.WriteLine("========== CANCELLATION TEST ==========");
+            standardTicket.Cancel();
+            standardTicket.Print();
+            Console.WriteLine();
+
+            // f) Use utility method to print array of printable tickets
+            Console.WriteLine("========== PRINTABLE ARRAY ==========");
+            IPrintable[] printTickets =
+            {
+                standardTicket,
+                vipTicket,
+                imaxTicket,
+                clonedVip
+            };
+
+            BookingHelper.PrintBookings(printTickets);
+
+
+            // g) Close the Cinema
             cinema.CloseCinema();
 
             Console.WriteLine("==================================================");

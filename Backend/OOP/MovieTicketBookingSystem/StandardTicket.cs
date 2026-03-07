@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class StandardTicket : Ticket
+public class StandardTicket : Ticket, ICloneable
 {
     // ---------- Additional Properities ----------
     public string SeatNumber { get; set; }
@@ -13,9 +13,15 @@ public class StandardTicket : Ticket
     }
 
     // ---------- Override Method ----------
-    public override void PrintTicket()
+    public override void Print()
     {
+        string status = IsBooked ? "Booked" : "Available";
 
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: Standard | Seat: {SeatNumber}");
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: Standard | Seat: {SeatNumber} | Status: {status}");
+    }
+
+    public Object Clone()
+    {
+        return new StandardTicket(this.MovieName!, this.Price, this.SeatNumber);
     }
 }
