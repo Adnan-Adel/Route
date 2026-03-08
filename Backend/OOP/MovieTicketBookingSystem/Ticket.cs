@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class Ticket : IPrintable, ICloneable
+public class Ticket : IPrintable, IBookable, ICloneable
 {
     // ---------- Private Fields ----------
     private string? movieName;
