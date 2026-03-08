@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class StandardTicket : Ticket, ICloneable
+public class StandardTicket : Ticket
 {
     // ---------- Additional Properities ----------
     public string SeatNumber { get; set; }
@@ -20,7 +20,7 @@ public class StandardTicket : Ticket, ICloneable
         Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: Standard | Seat: {SeatNumber} | Status: {status}");
     }
 
-    public Object Clone()
+    public override Object Clone()
     {
         return new StandardTicket(this.MovieName!, this.Price, this.SeatNumber);
     }

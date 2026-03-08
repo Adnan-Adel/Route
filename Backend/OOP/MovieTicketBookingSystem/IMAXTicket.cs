@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class IMAXTicket : Ticket, ICloneable
+public class IMAXTicket : Ticket
 {
     // ---------- Additional Property ----------
     private bool is3D;
@@ -33,7 +33,7 @@ public class IMAXTicket : Ticket, ICloneable
         Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: IMAX | Format: {format} | Status: {status}");
     }
 
-    public Object Clone()
+    public override Object Clone()
     {
         return new IMAXTicket(this.MovieName!, this.Price - (this.Is3D ? 30 : 0), this.Is3D);
     }
