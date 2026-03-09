@@ -22,19 +22,26 @@ public class IMAXTicket : Ticket
         : base(moviename, ticketPrice)
     {
         Is3D = is3D;
+        if (is3D)
+        {
+            Price += 30;
+        }
     }
+
+    // implementing abstract property
+    public override decimal FinalPrice => Price * 1.14m;
 
     // ---------- Override Method ----------
     public override void Print()
     {
-        string status = IsBooked ? "Booked" : "Available";
-
-        string format = Is3D ? "3D" : "2D";
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: IMAX | Format: {format} | Status: {status}");
+        string format = Is3D ? "Yes" : "No";
+        string bookedStatus = IsBooked ? "Yes" : "No";
+        Console.WriteLine($"[Ticket #{TicketId}] {MovieName} | IMAX | 3D: {format} | Price: {Price:F0} | Final: {FinalPrice:F2} | Booked: {bookedStatus}");
     }
 
     public override Object Clone()
     {
-        return new IMAXTicket(this.MovieName!, this.Price - (this.Is3D ? 30 : 0), this.Is3D);
+        decimal basePrice = Is3D ? Price - 30 : Price;
+        return new IMAXTicket(this.MovieName!, basePrice, this.Is3D);
     }
 }
