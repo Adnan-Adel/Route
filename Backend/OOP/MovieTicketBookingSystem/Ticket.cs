@@ -1,6 +1,6 @@
 ﻿namespace MovieTicketBookingSystem;
 
-public class Ticket : IPrintable, IBookable, ICloneable
+public abstract class Ticket : IPrintable, IBookable, ICloneable
 {
     // ---------- Private Fields ----------
     private string? movieName;
@@ -37,6 +37,9 @@ public class Ticket : IPrintable, IBookable, ICloneable
 
     // computed property
     public decimal PriceAfterTax => Price + (Price * 0.14m);
+
+    // abstract property
+    public abstract decimal FinalPrice { get; }
 
     // ---------- Constructor ----------
     public Ticket(string moviename, decimal ticketPrice)
@@ -83,24 +86,10 @@ public class Ticket : IPrintable, IBookable, ICloneable
         return true;
     }
 
-    // ---------- Virtual Methods ----------
-    public virtual void Print()
-    {
-        string status = IsBooked ? "Booked" : "Available";
-        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Status: {status}");
-    }
+    // ---------- Abstract Methods ----------
+    public abstract void Print();
 
-    public virtual Object Clone()
-    {
-        Ticket cloned = (Ticket)this.MemberwiseClone();
-
-        cloned.isBooked = false;
-
-        ticketCounter++;
-        cloned.TicketId = ticketCounter;
-
-        return cloned;
-    }
+    public abstract Object Clone();
 
     // ---------- Static Methods ----------
     public static int GetTotalTicketsSold()
