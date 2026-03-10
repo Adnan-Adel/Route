@@ -12,14 +12,12 @@ public class StandardTicket : Ticket
         SeatNumber = seatNumber;
     }
 
-    // implementing abstract property
-    public override decimal FinalPrice => Price * 1.14m;
-
     // ---------- Override Method ----------
     public override void Print()
     {
-        string bookedStatus = IsBooked ? "Yes" : "No";
-        Console.WriteLine($"[Ticket #{TicketId}] {MovieName} | Standard | Seat: {SeatNumber} | Price: {Price:F0} | Final: {FinalPrice:F2} | Booked: {bookedStatus}");
+        string status = IsBooked ? "Booked" : "Available";
+
+        Console.WriteLine($"Ticket #{TicketId} | {MovieName} | Price: {Price:F2} EGP | After Tax: {PriceAfterTax:F2} EGP | Type: Standard | Seat: {SeatNumber} | Status: {status}");
     }
 
     public override Object Clone()

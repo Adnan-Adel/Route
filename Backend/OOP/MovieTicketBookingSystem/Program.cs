@@ -4,46 +4,61 @@
     {
         static void Main(string[] args)
         {
+            // a) Create a Cinema and open it
             Cinema cinema = new Cinema("VOX Cinema");
             cinema.OpenCinema();
 
-            // a) Cannot create plain Ticket
-            // Ticket t = new Ticket("Test", 100);  // ERROR: Cannot create instance of abstract class
-
-            // b) Create tickets and book them
-            StandardTicket standardTicket = new StandardTicket("Inception", 80, "A5");
-            standardTicket.Book();
-
+            // b) Create one of each ticket type
+            StandardTicket standardTicket = new StandardTicket("Inception", 120, "A-5");
             VIPTicket vipTicket = new VIPTicket("Avengers", 200, true);
-            vipTicket.Book();
+            IMAXTicket imaxTicket = new IMAXTicket("Dune", 180, false);
 
-            IMAXTicket imaxTicket = new IMAXTicket("Dune", 100, true);
+            // Book all tickets
+            standardTicket.Book();
+            vipTicket.Book();
             imaxTicket.Book();
 
-            // c) Add to cinema and print
+            // Add tickets to cinema
             cinema.AddTicket(standardTicket);
             cinema.AddTicket(vipTicket);
             cinema.AddTicket(imaxTicket);
+
+            // c) Print all tickets (uses polymorphism)
             cinema.PrintAllTickets();
 
-            // d) Polymorphism - call abstract method
-            Console.WriteLine("\n--- Polymorphism: Final Price per Ticket ---");
-            Ticket[] ticketArray = { standardTicket, vipTicket, imaxTicket };
-            foreach (var ticket in ticketArray)
+            // d) Clone a VIP ticket and prove independence
+            Console.WriteLine("========== CLONING TEST ==========");
+            VIPTicket clonedVip = (VIPTicket)vipTicket.Clone();
+            clonedVip.MovieName = "Avatar";
+            Console.WriteLine("Original VIP Ticket:");
+            vipTicket.Print();
+            Console.WriteLine("Cloned VIP Ticket (Modified Movie):");
+            clonedVip.Print();
+            Console.WriteLine();
+
+            // e) Cancel one ticket and reprint it
+            Console.WriteLine("========== CANCELLATION TEST ==========");
+            standardTicket.Cancel();
+            standardTicket.Print();
+            Console.WriteLine();
+
+            // f) Use utility method to print array of printable tickets
+            Console.WriteLine("========== PRINTABLE ARRAY ==========");
+            IPrintable[] printTickets =
             {
-                Console.WriteLine($"{ticket.GetType().Name} => Final Price: {ticket.FinalPrice:F2}");
-            }
+                standardTicket,
+                vipTicket,
+                imaxTicket,
+                clonedVip
+            };
 
-            // e) Extension method - receipt
-            Console.WriteLine("\n--- Extension Method: Receipt ---");
-            Console.WriteLine(vipTicket.GetReceipt());
+            BookingHelper.PrintBookings(printTickets);
 
-            // f) Extension method - total revenue
-            Console.WriteLine("\n--- Extension Method: Total Revenue ---");
-            Console.WriteLine($"Total Revenue: {ticketArray.TotalRevenue():F2}");
 
-            // g) Close cinema
+            // g) Close the Cinema
             cinema.CloseCinema();
+
+            Console.WriteLine("==================================================");
         }
     }
 }
