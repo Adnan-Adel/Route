@@ -4,11 +4,11 @@ public static class BookingHelper
 {
     private static int bookingCounter = 0;
 
-    public static double CalcGroupDiscount(int numberOfTickets, double pricePerTicket)
+    public static decimal CalcGroupDiscount(int numberOfTickets, decimal pricePerTicket)
     {
-        double totalPrice = numberOfTickets * pricePerTicket;
+        decimal totalPrice = numberOfTickets * pricePerTicket;
         if (numberOfTickets >= 5)
-            totalPrice = totalPrice - (0.1 * totalPrice);
+            totalPrice = totalPrice - (0.1m * totalPrice);
         return totalPrice;
     }
 
