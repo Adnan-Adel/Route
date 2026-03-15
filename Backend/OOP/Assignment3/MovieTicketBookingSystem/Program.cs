@@ -40,9 +40,9 @@ class Program
         Console.WriteLine($"\nBooking Reference 1: {ref1}");
         Console.WriteLine($"\nBooking Reference 2: {ref2}");
 
-        double groupPrice = BookingHelper.CalcGroupDiscount(5, 100);
-        double originalPrice = 5 * 100;
-        double discount = originalPrice - groupPrice;
+        decimal groupPrice = BookingHelper.CalcGroupDiscount(5, 100);
+        decimal originalPrice = 5 * 100;
+        decimal discount = originalPrice - groupPrice;
         Console.WriteLine($"\nGroup Discount (5 tickets x 100 EGP): {groupPrice} EGP (10% off applied)");
         Console.WriteLine($"You saved: {discount} EGP");
 

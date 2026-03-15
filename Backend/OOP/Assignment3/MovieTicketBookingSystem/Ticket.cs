@@ -17,8 +17,9 @@ public class Ticket
         get { return movieName; }
         set
         {
-            if (!string.IsNullOrEmpty(value))
-                movieName = value;
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentException("Movie name cannot be empty");
+            movieName = value;
         }
     }
 
@@ -27,8 +28,9 @@ public class Ticket
         get { return price; }
         set
         {
-            if (value > 0)
-                price = value;
+            if (value <= 0)
+                throw new ArgumentException("Price must be greater than zero");
+            price = value;
         }
     }
 
