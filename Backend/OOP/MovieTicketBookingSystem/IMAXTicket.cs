@@ -3,29 +3,13 @@
 public class IMAXTicket : Ticket
 {
     // ---------- Additional Property ----------
-    private bool is3D;
-    public bool Is3D
-    {
-        get { return is3D; }
-        set
-        {
-            is3D = value;
-            if (is3D)
-            {
-                Price += 30;
-            }
-        }
-    }
+    public bool Is3D { get; }
 
     // ---------- Constructor ----------
     public IMAXTicket(string moviename, decimal ticketPrice, bool is3D)
-        : base(moviename, ticketPrice)
+        : base(moviename, ticketPrice + (is3D ? 30 : 0))
     {
         Is3D = is3D;
-        if (is3D)
-        {
-            Price += 30;
-        }
     }
 
     // implementing abstract property
