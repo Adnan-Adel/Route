@@ -108,6 +108,26 @@ class Program
         Console.WriteLine("   Example:");
         Console.WriteLine("      public override void Display() { Console.WriteLine(\"Derived\"); }\n");
 
+        Console.WriteLine("3. 'abstract' Keyword");
+        Console.WriteLine("   Location: Abstract parent class");
+        Console.WriteLine("   Purpose: Forces derived classes to provide implementation");
+        Console.WriteLine("   Example: public abstract void Calculate();\n");
+
+        Console.WriteLine("4. 'sealed' Keyword");
+        Console.WriteLine("   Location: Derived class");
+        Console.WriteLine("   Purpose: Stops the override chain");
+        Console.WriteLine("   Example: public sealed override void Display() { }\n");
+
+        Console.WriteLine("5. 'new' Keyword (Method Hiding)");
+        Console.WriteLine("   Location: Derived class");
+        Console.WriteLine("   Purpose: Hides parent's method (static binding)");
+        Console.WriteLine("   Example: public new void Display() { }\n");
+
+        Console.WriteLine("6. 'base' Keyword");
+        Console.WriteLine("   Location: Derived class");
+        Console.WriteLine("   Purpose: Calls parent's implementation");
+        Console.WriteLine("   Example: base.Display();\n");
+
         Console.WriteLine("=====================================================\n");
     }
 }
