@@ -5,7 +5,7 @@ public class VIPTicket : Ticket
 
     // ---------- Additional Properities ----------
     public bool LoungeAccess { get; set; }
-    public decimal ServiceFee { get; set; } = 50;
+    public decimal ServiceFee { get; } = 50;
 
     // ---------- Constructor ----------
     public VIPTicket(string moviename, decimal ticketPrice, bool loungeAccess)
