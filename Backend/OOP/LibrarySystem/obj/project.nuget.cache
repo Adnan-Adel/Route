@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wTvfKwGMLTo=",
+  "success": true,
+  "projectFilePath": "/home/adnan/AdnanStuff/git-work/Route/Backend/OOP/LibrarySystem/LibrarySystem.csproj",
+  "expectedPackageFiles": [
+    "/home/adnan/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.25/microsoft.netcore.app.host.linux-x64.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

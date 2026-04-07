@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/04 Advanced C#/Session 01/Assignment/Assignment1/Assignment1.csproj": {}
+    "/home/adnan/AdnanStuff/git-work/Route/Backend/Advanced C#/Assignment1/Assignment1.csproj": {}
   },
   "projects": {
-    "/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/04 Advanced C#/Session 01/Assignment/Assignment1/Assignment1.csproj": {
+    "/home/adnan/AdnanStuff/git-work/Route/Backend/Advanced C#/Assignment1/Assignment1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/04 Advanced C#/Session 01/Assignment/Assignment1/Assignment1.csproj",
+        "projectUniqueName": "/home/adnan/AdnanStuff/git-work/Route/Backend/Advanced C#/Assignment1/Assignment1.csproj",
         "projectName": "Assignment1",
-        "projectPath": "/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/04 Advanced C#/Session 01/Assignment/Assignment1/Assignment1.csproj",
+        "projectPath": "/home/adnan/AdnanStuff/git-work/Route/Backend/Advanced C#/Assignment1/Assignment1.csproj",
         "packagesPath": "/home/adnan/.nuget/packages/",
-        "outputPath": "/media/adnan/Data/MyLearning/Software/Route/backend/Aliaa/04 Advanced C#/Session 01/Assignment/Assignment1/obj/",
+        "outputPath": "/home/adnan/AdnanStuff/git-work/Route/Backend/Advanced C#/Assignment1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/adnan/.nuget/NuGet/NuGet.Config"
